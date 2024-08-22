@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MError</title>
+    </head>
+    <div>
+        <h1> Hello</h1>
+    </div>
+    <body text="#ffffff" style= "background-color:black;">
+        <h1>MERROR UI</h1>
+        {{auth_user}}
+        
+        {% for i in users %}
+        <strong>{{i}}</strong>
+        <br>
+        {% endfor %}
+
+        {% for i in tweets %}
+        <strong>{{i}}</strong>
+        <br>
+        {% endfor %}
+        {% for i in date_time %}
+        <strong>{{i}}</strong>
+        <br>
+        {% endfor %}
+        {% for i in news %}
+        <strong>{{i}}</strong>
+        <br>
+        {% endfor %}
+        {% for i in weather %}
+        <strong>{{i}}</strong>
+        <br>
+        {% endfor %}
+        
+        {% for d in cal %}
+        <strong>{{d.date}}</strong><strong>{{d.startTime}}</strong><strong>{{d.endTime}}</strong><strong>{{d.summary}}</strong>
+        <br>
+        {% endfor %}
+    
+        <script>
+            window.setTimeout(function () {
+                location.href = "http://127.0.0.1:8000/";
+            }, 15000); // refresh/redirect after 5 seconds.
+        </script>
+    </body>
+    
+</html>
